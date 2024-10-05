@@ -1,0 +1,31 @@
+.spinner {
+    height: calc(100vh - 200px);
+    width: 100%;
+    background-color: transparent;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative; /* Ensure dots are positioned within this container */
+}
+
+.dots {
+    position: relative;
+    width: 100px; /* Set a fixed size for the circle */
+    height: 100px;
+}
+
+.dot {
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    background-color: var(--light-red-color);
+    border-radius: 50%;
+    animation: spin 1.5s linear infinite;
+    opacity: 0;
+}
+
+@keyframes spin {
+    0% { opacity: 0; }
+    50% { opacity: 1; }
+    100% { opacity: 0; }
+}
